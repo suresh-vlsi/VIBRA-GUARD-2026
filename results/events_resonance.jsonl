@@ -1,0 +1,10 @@
+{"win": 0, "t": 4.1, "type": "CALIBRATE", "msg": "identified structural fn = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "ANOMALY", "msg": "score 3.4x threshold; top deviations [('a2', 5.2), ('a15', 4.4), ('rms', 4.2)]"}
+{"win": 12, "t": 10.24, "type": "MODEL", "msg": "reusing calibrated secondary path; structural fn estimate = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "PROBE", "msg": "testing 2x response at nearby safe speed points"}
+{"win": 12, "t": 12.29, "type": "MODEL", "msg": "resonance candidate from speed sweep: estimated mode 40.0 Hz; normalized 2x peak=2.42x, RMS peak=2.68x"}
+{"win": 12, "t": 12.29, "type": "DIAGNOSE", "msg": "resonance (conf 0.98, severity severe, RMS 0.655 g = 11.4x baseline) | measured speed-sweep peak near 40.0 Hz; normalized 2x response peak=2.42x"}
+{"win": 12, "t": 12.29, "type": "ACTION", "msg": "SHIFT_SPEED: 1200 -> 875 rpm (steering orders away from fn=40 Hz)"}
+{"win": 12, "t": 12.29, "type": "ALERT", "msg": "maintenance notified: suspected resonance; action=SHIFT_SPEED"}
+{"win": 14, "t": 13.31, "type": "VERIFY", "msg": "SHIFT_SPEED mitigation effective: median RMS 0.655 -> 0.109 g (15.6 dB, reduction=83.3%)"}
+{"win": 20, "t": 16.38, "type": "RECOVERED", "msg": "recovery verified: 6 consecutive healthy windows; RMS <= 0.086 g"}

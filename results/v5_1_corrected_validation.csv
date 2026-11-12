@@ -1,0 +1,141 @@
+trial_id,seed,fault,rpm_start,severity,structural_mode_hz,detected,detected_by_trip_only,detection_latency_windows,diagnosed,diagnosis_confidence,diagnosis_severity,incident_rms_g,diagnosis_correct,mitigation_verified,recovered,safe_stop,trip_rms_g,trip_stage,trip_state,stop_reason,false_alarm,outcome,final_state,actions
+1,2026,healthy,1007.36,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+2,2027,healthy,904.8,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+3,2028,healthy,1132.05,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+4,2029,healthy,1379.47,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+5,2030,healthy,1137.78,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+6,2031,healthy,1131.37,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+7,2032,healthy,1210.04,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+8,2033,healthy,951.53,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+9,2034,healthy,932.33,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+10,2035,healthy,1002.06,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+11,2036,healthy,1484.01,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+12,2037,healthy,1439.59,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+13,2038,healthy,1295.25,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+14,2039,healthy,1270.81,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+15,2040,healthy,1312.79,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+16,2041,healthy,1247.99,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+17,2042,healthy,1220.08,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+18,2043,healthy,1403.07,0.0,70.0,True,True,0,none,,,,True,False,False,True,1.12,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,HEALTHY_NO_ALARM,STOPPED,SAFE_STOP
+19,2044,healthy,1172.4,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+20,2045,healthy,1449.65,0.0,70.0,False,False,,none,,,,True,False,False,False,,,,,False,HEALTHY_NO_ALARM,MONITOR,
+21,3026,imbalance,1331.64,0.579,70.0,True,False,1,imbalance,0.52,moderate,0.268,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT
+22,3027,imbalance,996.29,0.604,70.0,True,False,1,imbalance,0.6,moderate,0.154,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+23,3028,imbalance,1037.04,0.602,70.0,True,False,1,imbalance,0.65,moderate,0.137,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+24,3029,imbalance,1298.77,0.596,70.0,True,False,1,imbalance,0.73,moderate,0.273,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+25,3030,imbalance,1199.77,0.931,70.0,True,False,1,imbalance,0.76,moderate,0.291,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+26,3031,imbalance,995.54,0.594,70.0,True,False,1,imbalance,0.6,moderate,0.141,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+27,3032,imbalance,1257.25,0.627,70.0,True,False,1,imbalance,0.84,moderate,0.197,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+28,3033,imbalance,1226.88,0.713,70.0,True,False,1,imbalance,0.78,moderate,0.247,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+29,3034,imbalance,1033.67,0.889,70.0,True,False,1,imbalance,0.62,moderate,0.234,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+30,3035,imbalance,1038.82,0.758,70.0,False,False,,none,,,,False,False,False,True,1.02,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+31,3036,imbalance,1181.09,0.989,70.0,True,False,1,imbalance,0.76,moderate,0.282,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+32,3037,imbalance,1158.58,0.856,70.0,True,False,1,imbalance,0.83,moderate,0.185,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+33,3038,imbalance,1438.84,0.655,70.0,True,False,1,imbalance,0.45,moderate,0.398,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT
+34,3039,imbalance,1088.76,0.973,70.0,True,False,1,imbalance,0.95,minor,0.108,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+35,3040,imbalance,1097.61,0.906,70.0,True,False,1,imbalance,0.64,moderate,0.283,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+36,3041,imbalance,1051.52,0.753,70.0,True,False,1,imbalance,0.58,moderate,0.218,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+37,3042,imbalance,906.62,0.962,70.0,True,False,1,imbalance,0.6,moderate,0.187,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+38,3043,imbalance,1155.57,0.918,70.0,True,False,1,imbalance,0.66,moderate,0.32,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT
+39,3044,imbalance,1404.3,0.672,70.0,True,False,1,imbalance,0.38,moderate,0.444,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT
+40,3045,imbalance,1457.96,0.96,70.0,True,False,1,imbalance,0.55,severe,0.604,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT
+41,4026,misalignment,1032.0,0.672,70.0,True,False,1,misalignment,0.72,moderate,0.147,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+42,4027,misalignment,1153.93,0.715,70.0,True,False,1,misalignment,0.81,moderate,0.282,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+43,4028,misalignment,1064.22,0.925,70.0,True,False,1,misalignment,0.78,moderate,0.214,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+44,4029,misalignment,1359.76,0.77,70.0,True,False,1,misalignment,0.58,severe,0.593,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+45,4030,misalignment,982.6,0.756,70.0,True,False,1,misalignment,0.77,moderate,0.118,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+46,4031,misalignment,1302.34,0.865,70.0,True,False,1,misalignment,0.83,severe,0.504,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+47,4032,misalignment,975.92,0.96,70.0,True,False,1,misalignment,0.66,moderate,0.171,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+48,4033,misalignment,1272.83,0.712,70.0,True,False,1,misalignment,0.8,severe,0.421,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+49,4034,misalignment,965.0,0.742,70.0,True,False,1,misalignment,0.64,moderate,0.135,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+50,4035,misalignment,1135.83,0.884,70.0,True,False,1,misalignment,0.77,moderate,0.322,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+51,4036,misalignment,977.4,0.667,70.0,True,False,1,misalignment,0.8,minor,0.103,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+52,4037,misalignment,1392.76,0.751,70.0,True,False,1,misalignment,0.53,severe,0.702,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+53,4038,misalignment,1029.1,0.56,70.0,True,False,1,misalignment,0.73,moderate,0.127,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+54,4039,misalignment,1162.15,0.79,70.0,True,False,1,misalignment,0.8,moderate,0.297,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+55,4040,misalignment,980.9,0.709,70.0,True,False,1,misalignment,0.71,moderate,0.128,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+56,4041,misalignment,1139.78,0.674,70.0,True,False,1,misalignment,0.78,moderate,0.23,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+57,4042,misalignment,958.54,0.765,70.0,True,False,1,misalignment,0.59,moderate,0.157,True,True,True,False,,,,,False,RECOVERED,MONITOR,ACTIVE_REJECT;DERATE
+58,4043,misalignment,1050.24,0.759,70.0,True,False,1,misalignment,0.78,moderate,0.157,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,ACTIVE_REJECT;DERATE;SAFE_STOP
+59,4044,misalignment,1181.3,0.964,70.0,True,False,1,misalignment,0.88,moderate,0.338,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+60,4045,misalignment,1248.2,0.748,70.0,True,False,1,misalignment,0.86,moderate,0.354,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,ACTIVE_REJECT;DERATE
+61,5026,resonance,1292.39,0.58,44.23,True,False,1,resonance,0.93,severe,0.625,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+62,5027,resonance,1137.12,0.748,36.95,True,False,1,resonance,0.86,severe,0.522,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+63,5028,resonance,1382.97,0.925,47.09,True,False,1,resonance,0.97,severe,0.744,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+64,5029,resonance,1083.83,0.771,35.91,True,False,1,resonance,0.75,severe,0.557,True,True,True,False,,,,,True,RECOVERED,MONITOR,SHIFT_SPEED
+65,5030,resonance,1072.23,0.553,36.27,True,False,1,resonance,0.84,severe,0.487,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+66,5031,resonance,1118.12,0.948,37.94,True,False,1,resonance,0.84,severe,0.483,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+67,5032,resonance,1313.77,0.753,43.51,True,False,1,resonance,0.96,severe,0.763,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+68,5033,resonance,1099.88,0.982,35.79,True,False,1,resonance,0.85,severe,0.461,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+69,5034,resonance,1141.5,0.625,39.13,True,False,1,resonance,0.85,severe,0.456,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+70,5035,resonance,1246.81,0.797,40.37,True,False,1,resonance,0.92,severe,0.581,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+71,5036,resonance,1290.75,0.96,42.12,True,False,1,resonance,0.94,severe,0.659,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+72,5037,resonance,1456.46,0.56,48.63,True,True,1,none,,,,False,False,False,True,1.09,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+73,5038,resonance,1467.86,0.95,50.06,True,False,1,none,,,,False,False,False,True,1.14,PROBE,MONITOR,SAFE_STOP: hard limit exceeded during diagnostic sweep,False,SAFE_STOP,STOPPED,SAFE_STOP
+74,5039,resonance,1084.35,0.82,35.11,True,False,1,resonance,0.88,severe,0.417,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+75,5040,resonance,957.62,0.855,31.14,False,False,,none,,,,False,False,False,True,1.02,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+76,5041,resonance,937.44,0.653,31.69,True,False,1,resonance,0.75,severe,0.363,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+77,5042,resonance,1045.81,0.842,35.32,True,False,1,resonance,0.83,severe,0.462,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+78,5043,resonance,1200.61,0.989,40.61,True,False,1,resonance,0.92,severe,0.605,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+79,5044,resonance,1096.48,0.908,36.09,True,False,1,resonance,0.8,severe,0.495,True,True,True,False,,,,,False,RECOVERED,MONITOR,SHIFT_SPEED
+80,5045,resonance,1063.66,0.624,36.01,False,False,,none,,,,False,False,False,True,1.14,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+81,6026,looseness,1026.71,0.571,70.0,True,False,1,looseness,0.99,severe,0.902,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+82,6027,looseness,1334.36,0.945,70.0,True,True,0,none,,,,False,False,False,True,2.21,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+83,6028,looseness,1215.57,0.653,70.0,True,False,1,looseness,0.99,severe,0.649,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+84,6029,looseness,1313.34,0.926,70.0,True,True,0,none,,,,False,False,False,True,1.77,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+85,6030,looseness,1175.38,0.796,70.0,False,False,,none,,,,False,False,False,True,1.02,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+86,6031,looseness,1360.12,0.939,70.0,True,True,0,none,,,,False,False,False,True,3.1,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+87,6032,looseness,1343.49,0.844,70.0,True,True,0,none,,,,False,False,False,True,2.15,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+88,6033,looseness,1477.38,0.996,70.0,True,True,0,none,,,,False,False,False,True,2.87,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+89,6034,looseness,1154.75,0.829,70.0,True,False,1,looseness,0.99,severe,0.846,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+90,6035,looseness,1117.26,0.624,70.0,True,False,1,looseness,0.99,severe,0.753,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+91,6036,looseness,976.27,0.588,70.0,True,False,1,looseness,0.99,severe,0.448,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,OPTIMIZE_SPEED;SAFE_STOP
+92,6037,looseness,1114.4,0.758,70.0,True,False,1,looseness,0.99,severe,0.946,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+93,6038,looseness,1225.25,0.847,70.0,True,False,1,looseness,0.99,severe,0.818,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+94,6039,looseness,1006.97,0.596,70.0,True,False,1,looseness,1.0,severe,0.705,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+95,6040,looseness,1047.83,0.569,70.0,True,True,0,none,,,,False,False,False,True,1.08,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+96,6041,looseness,1261.26,0.939,70.0,True,True,0,none,,,,False,False,False,True,1.14,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+97,6042,looseness,1002.46,0.949,70.0,True,True,0,none,,,,False,False,False,True,1.03,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+98,6043,looseness,1148.93,0.683,70.0,True,False,1,looseness,0.99,severe,0.69,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+99,6044,looseness,1364.35,0.853,70.0,True,True,0,none,,,,False,False,False,True,2.93,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+100,6045,looseness,1471.78,0.614,70.0,True,True,0,none,,,,False,False,False,True,1.72,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+101,7026,bearing_outer,939.18,0.918,70.0,True,False,1,bearing_outer,0.64,minor,0.108,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+102,7027,bearing_outer,1128.74,0.707,70.0,True,False,1,bearing_outer,0.65,minor,0.111,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+103,7028,bearing_outer,1237.57,0.63,70.0,True,False,1,bearing_outer,0.64,moderate,0.131,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,OPTIMIZE_SPEED;SAFE_STOP
+104,7029,bearing_outer,1237.47,0.799,70.0,False,False,,none,,,,False,False,False,True,1.05,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+105,7030,bearing_outer,991.1,0.6,70.0,True,False,1,bearing_outer,0.64,minor,0.099,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+106,7031,bearing_outer,1165.3,0.701,70.0,True,False,1,bearing_outer,0.65,minor,0.112,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+107,7032,bearing_outer,1357.94,0.91,70.0,True,False,1,bearing_outer,0.63,moderate,0.266,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+108,7033,bearing_outer,1131.79,0.572,70.0,True,False,1,bearing_outer,0.65,minor,0.097,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+109,7034,bearing_outer,1217.79,0.695,70.0,True,False,1,bearing_outer,0.64,moderate,0.154,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+110,7035,bearing_outer,1088.43,0.832,70.0,True,False,1,bearing_outer,0.64,moderate,0.143,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,OPTIMIZE_SPEED;SAFE_STOP
+111,7036,bearing_outer,959.09,0.752,70.0,True,False,1,bearing_outer,0.65,minor,0.099,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+112,7037,bearing_outer,1457.79,0.7,70.0,True,False,1,bearing_outer,0.64,moderate,0.22,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+113,7038,bearing_outer,1049.57,0.58,70.0,True,False,1,bearing_outer,0.68,minor,0.086,True,False,False,False,,,,,False,NOT_VERIFIED,MONITOR,
+114,7039,bearing_outer,1222.83,0.614,70.0,True,False,1,bearing_outer,0.64,moderate,0.133,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+115,7040,bearing_outer,1399.87,0.955,70.0,False,False,,none,,,,False,False,False,True,1.01,CALIBRATE,MONITOR,SAFE_STOP: hard limit exceeded,False,SAFE_STOP,STOPPED,SAFE_STOP
+116,7041,bearing_outer,1380.11,0.957,70.0,True,False,1,bearing_outer,0.62,moderate,0.307,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+117,7042,bearing_outer,1106.95,0.981,70.0,True,False,1,bearing_outer,0.64,moderate,0.164,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,OPTIMIZE_SPEED;SAFE_STOP
+118,7043,bearing_outer,1472.14,0.85,70.0,True,False,1,bearing_outer,0.63,moderate,0.23,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+119,7044,bearing_outer,1399.01,0.654,70.0,True,False,1,bearing_outer,0.61,moderate,0.254,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,OPTIMIZE_SPEED
+120,7045,bearing_outer,1282.68,0.878,70.0,True,False,1,bearing_outer,0.64,moderate,0.152,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,OPTIMIZE_SPEED;SAFE_STOP
+121,8026,bearing_inner,1065.25,0.772,70.0,True,False,1,bearing_inner,0.69,moderate,0.175,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+122,8027,bearing_inner,946.78,0.744,70.0,True,False,1,bearing_inner,0.74,moderate,0.118,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP
+123,8028,bearing_inner,1199.05,0.731,70.0,True,False,1,bearing_inner,0.63,moderate,0.223,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+124,8029,bearing_inner,1282.85,0.718,70.0,True,False,1,bearing_inner,0.73,moderate,0.16,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP
+125,8030,bearing_inner,1312.57,0.655,70.0,True,False,1,bearing_inner,0.72,moderate,0.156,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP
+126,8031,bearing_inner,985.45,0.673,70.0,True,False,1,bearing_inner,0.74,moderate,0.117,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP
+127,8032,bearing_inner,1106.58,0.848,70.0,True,False,1,bearing_inner,0.74,moderate,0.141,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP
+128,8033,bearing_inner,977.88,0.943,70.0,True,False,1,bearing_inner,0.76,moderate,0.148,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP
+129,8034,bearing_inner,1165.87,0.88,70.0,True,False,1,bearing_inner,0.67,moderate,0.221,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP
+130,8035,bearing_inner,1004.58,0.763,70.0,True,False,1,bearing_inner,0.71,moderate,0.161,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+131,8036,bearing_inner,1083.4,0.97,70.0,True,False,1,bearing_inner,0.75,moderate,0.199,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+132,8037,bearing_inner,1347.36,0.749,70.0,True,False,1,bearing_inner,0.64,moderate,0.231,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+133,8038,bearing_inner,1034.88,0.834,70.0,True,False,1,bearing_inner,0.66,moderate,0.191,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+134,8039,bearing_inner,1413.57,0.914,70.0,True,False,1,bearing_inner,0.6,moderate,0.393,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+135,8040,bearing_inner,901.38,0.659,70.0,True,False,1,bearing_inner,0.69,moderate,0.129,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+136,8041,bearing_inner,1391.17,0.979,70.0,True,False,1,bearing_inner,0.59,moderate,0.355,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+137,8042,bearing_inner,1381.18,0.692,70.0,True,False,1,bearing_inner,0.69,moderate,0.279,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+138,8043,bearing_inner,1458.86,0.679,70.0,True,False,1,bearing_inner,0.62,moderate,0.313,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+139,8044,bearing_inner,1209.5,0.837,70.0,True,False,1,bearing_inner,0.61,moderate,0.261,True,True,False,False,,,,,False,MITIGATED_NOT_RECOVERED,MITIGATED,DERATE
+140,8045,bearing_inner,1108.1,0.764,70.0,True,False,1,bearing_inner,0.72,moderate,0.135,True,False,False,True,,,,SAFE_STOP: no remaining mitigation options,False,SAFE_STOP,STOPPED,DERATE;SAFE_STOP

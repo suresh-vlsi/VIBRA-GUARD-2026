@@ -1,0 +1,14 @@
+{"win": 0, "t": 4.1, "type": "CALIBRATE", "msg": "identified structural fn = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "ANOMALY", "msg": "score 4.4x threshold; top deviations [('env_bpfo', 33.6), ('rms', 1.5), ('a15', -1.4)]"}
+{"win": 12, "t": 10.24, "type": "MODEL", "msg": "reusing calibrated secondary path; structural fn estimate = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "DIAGNOSE", "msg": "bearing_outer (conf 0.64, severity moderate, RMS 0.165 g = 2.9x baseline) | envelope peak at BPFO SNR=23.0, kurtosis=2.5"}
+{"win": 12, "t": 10.24, "type": "PROBE", "msg": "measuring vibration at bounded speed candidates: 900, 930, 960 rpm"}
+{"win": 12, "t": 11.78, "type": "PROBE", "msg": "speed 900 rpm -> measured median RMS 0.108 g"}
+{"win": 12, "t": 13.31, "type": "PROBE", "msg": "speed 930 rpm -> measured median RMS 0.097 g"}
+{"win": 12, "t": 14.85, "type": "PROBE", "msg": "speed 960 rpm -> measured median RMS 0.098 g"}
+{"win": 12, "t": 14.85, "type": "MODEL", "msg": "selected measured operating point 930 rpm; trial RMS=0.097 g (41.3% below incident reference)"}
+{"win": 12, "t": 14.85, "type": "ACTION", "msg": "OPTIMIZE_SPEED: 930 rpm selected from measured candidates"}
+{"win": 12, "t": 14.85, "type": "ALERT", "msg": "maintenance notified: suspected bearing_outer; action=OPTIMIZE_SPEED"}
+{"win": 14, "t": 15.87, "type": "VERIFY", "msg": "OPTIMIZE_SPEED mitigation effective: median RMS 0.165 -> 0.101 g (4.3 dB, reduction=38.9%)"}
+{"win": 34, "t": 26.11, "type": "RECOVERY_PENDING", "msg": "mitigation remains active, but recovery was not verified within 20 windows"}
+{"win": 54, "t": 36.35, "type": "RECOVERY_PENDING", "msg": "mitigation remains active, but recovery was not verified within 20 windows"}

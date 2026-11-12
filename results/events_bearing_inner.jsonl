@@ -1,0 +1,9 @@
+{"win": 0, "t": 4.1, "type": "CALIBRATE", "msg": "identified structural fn = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "ANOMALY", "msg": "score 3.0x threshold; top deviations [('env_bpfi', 21.9), ('rms', 2.4), ('a05', 1.6)]"}
+{"win": 12, "t": 10.24, "type": "MODEL", "msg": "reusing calibrated secondary path; structural fn estimate = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "DIAGNOSE", "msg": "bearing_inner (conf 0.64, severity moderate, RMS 0.257 g = 4.5x baseline) | envelope peak at BPFI SNR=15.1, kurtosis=3.0"}
+{"win": 12, "t": 10.24, "type": "ACTION", "msg": "DERATE: 1200 -> 840 rpm"}
+{"win": 12, "t": 10.24, "type": "ALERT", "msg": "maintenance notified: suspected bearing_inner; action=DERATE"}
+{"win": 14, "t": 11.26, "type": "VERIFY", "msg": "DERATE mitigation effective: median RMS 0.257 -> 0.112 g (7.2 dB, reduction=56.5%)"}
+{"win": 34, "t": 21.5, "type": "RECOVERY_PENDING", "msg": "mitigation remains active, but recovery was not verified within 20 windows"}
+{"win": 54, "t": 31.74, "type": "RECOVERY_PENDING", "msg": "mitigation remains active, but recovery was not verified within 20 windows"}

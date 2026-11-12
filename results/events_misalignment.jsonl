@@ -1,0 +1,14 @@
+{"win": 0, "t": 4.1, "type": "CALIBRATE", "msg": "identified structural fn = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "ANOMALY", "msg": "score 2.5x threshold; top deviations [('a2', 3.8), ('a05', 3.7), ('rms', 2.6)]"}
+{"win": 12, "t": 10.24, "type": "MODEL", "msg": "reusing calibrated secondary path; structural fn estimate = 70.0 Hz"}
+{"win": 12, "t": 10.24, "type": "PROBE", "msg": "testing 2x response at nearby safe speed points"}
+{"win": 12, "t": 12.29, "type": "PROBE", "msg": "no clear fixed-mode peak: normalized 2x ratio=0.85x, RMS ratio=1.01x"}
+{"win": 12, "t": 12.29, "type": "DIAGNOSE", "msg": "misalignment (conf 0.80, severity moderate, RMS 0.323 g = 5.6x baseline) | 2x/1x amplitude ratio=6.24"}
+{"win": 12, "t": 12.29, "type": "ACTION", "msg": "ACTIVE_REJECT: FxLMS cancelling orders (1, 2) (using calibrated secondary path)"}
+{"win": 12, "t": 12.29, "type": "ALERT", "msg": "maintenance notified: suspected misalignment; action=ACTIVE_REJECT"}
+{"win": 16, "t": 14.34, "type": "VERIFY", "msg": "ACTIVE_REJECT mitigation insufficient: median RMS 0.323 -> 0.288 g (1.0 dB, reduction=11.1%)"}
+{"win": 16, "t": 14.34, "type": "ACTION", "msg": "DERATE: 1200 -> 840 rpm"}
+{"win": 16, "t": 14.34, "type": "ALERT", "msg": "maintenance notified: suspected misalignment; action=DERATE"}
+{"win": 18, "t": 15.36, "type": "VERIFY", "msg": "DERATE mitigation effective: median RMS 0.323 -> 0.124 g (8.3 dB, reduction=61.7%)"}
+{"win": 38, "t": 25.6, "type": "RECOVERY_PENDING", "msg": "mitigation remains active, but recovery was not verified within 20 windows"}
+{"win": 58, "t": 35.84, "type": "RECOVERY_PENDING", "msg": "mitigation remains active, but recovery was not verified within 20 windows"}
