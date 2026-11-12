@@ -88,84 +88,101 @@ The agent uses a state-driven workflow to connect fault detection, diagnosis, mi
 | Agent architecture | Monitoring, probing, diagnosis, planning, action and verification |
 | Dashboard | Interactive Streamlit interface for simulation and visualisation |
 
+---
+
 ## 4. Fault Scenarios
 
-The simulator supports six fault conditions and healthy operation:
+The simulator supports healthy operation plus six fault conditions:
 
-1. Imbalance
-2. Misalignment
-3. Resonance
-4. Looseness
-5. Bearing outer-race defect
-6. Bearing inner-race defect
-7. Healthy operation
-
-## 5. Six-Fault Simulation Validation
-
-A six-scenario simulation validation was performed using the uploaded validation dataset.
-
-| Fault | Diagnosed | RMS Before (g) | RMS After (g) | Reduction (dB) | Agent State |
-|---|---|---:|---:|---:|---|
-| Imbalance | Yes | 0.304 | 0.0615 | 13.88 | MONITOR |
-| Misalignment | Yes | 0.329 | 0.0702 | 13.42 | MITIGATED |
-| Resonance | Yes | 0.662 | 0.0532 | 21.89 | MONITOR |
-| Looseness | Yes | 0.769 | 0.4446 | 4.76 | MITIGATED |
-| Bearing outer | Yes | 0.166 | 0.1003 | 4.37 | MITIGATED |
-| Bearing inner | Yes | 0.256 | 0.1075 | 7.54 | MITIGATED |
-
-### Agent intervention decisions
-
-| Fault | Simulated intervention |
+| # | Condition |
 |---|---|
-| Imbalance | ACTIVE_REJECT |
-| Misalignment | ACTIVE_REJECT → DERATE |
-| Resonance | SHIFT_SPEED |
-| Looseness | OPTIMIZE_SPEED |
-| Bearing outer | OPTIMIZE_SPEED |
-| Bearing inner | DERATE |
+| 0 | Healthy operation |
+| 1 | Imbalance |
+| 2 | Misalignment |
+| 3 | Resonance |
+| 4 | Looseness |
+| 5 | Bearing outer-race defect |
+| 6 | Bearing inner-race defect |
 
-**Interpretation**
+## 5. Six-Fault Closed-Loop Demonstration
 
-- All six scenarios were diagnosed correctly in this validation dataset.
-- All six scenarios showed a reduction in RMS vibration after intervention.
-- The largest reported reduction was for resonance at approximately 21.89 dB.
-- The smallest reported reduction was for bearing outer-race fault at approximately 4.37 dB.
-- Agent state and intervention labels are reported as recorded in the dataset.
+One closed-loop run per fault, using the dashboard's "run all six" mode.
 
-**Important:** This dataset contains six scenario records. It is not a large-scale randomized statistical evaluation and should not be interpreted as a generalisation or hardware-performance guarantee. The recorded agent states are not, by themselves, proof of independently verified recovery.
+**Settings (to reproduce):** 1200 rpm, 60 windows, fault injected at window 10, scenario seeds 100–105, healthy baseline trained with `train_baseline(n=80, seed=5)`, diagnosis model trained with `make_dataset(40, seed=42)`. Equivalent command-line run: `python main.py --quick` (same scenarios, different seeds, so numbers differ slightly).
 
-## 6. Experimental Validation History
+| Fault | Diagnosed | RMS before (g) | RMS after (g) | Reduction (dB) | Intervention | Outcome | After ÷ healthy baseline* |
+|---|---|---:|---:|---:|---|---|---:|
+| Imbalance | Yes | 0.304 | 0.0615 | 13.88 | ACTIVE_REJECT | **Recovered** | 1.03× |
+| Misalignment | Yes | 0.329 | 0.0702 | 13.42 | ACTIVE_REJECT → DERATE | Mitigated, not recovered | 1.18× |
+| Resonance | Yes | 0.662 | 0.0532 | 21.89 | SHIFT_SPEED | **Recovered** | 0.89× |
+| Looseness | Yes | 0.769 | 0.4446 | 4.76 | OPTIMIZE_SPEED | Mitigated, not recovered | **7.45×** |
+| Bearing outer | Yes | 0.166 | 0.1003 | 4.37 | OPTIMIZE_SPEED | Mitigated, not recovered | 1.68× |
+| Bearing inner | Yes | 0.256 | 0.1075 | 7.54 | DERATE | Mitigated, not recovered | 1.80× |
 
-The repository also contains earlier simulation experiments. These are separate evaluation runs and should not be combined with the six-scenario results above.
+*Healthy baseline RMS = 0.0597 g. "RMS before" is the incident RMS (for misalignment, the level before any action).
 
-### Earlier quick validation
+### Interpretation
 
-The existing project validation reported:
+- All six faults were diagnosed correctly and detected in the first window after injection.
+- Two scenarios (imbalance, resonance) reached verified recovery to the healthy level.
+- Four scenarios reduced vibration but did not return to the healthy level. Looseness remains about 7× the healthy baseline, so its reduction should be read as partial mitigation, not recovery.
+- The smallest reduction was bearing outer-race (4.37 dB); harmonic rejection is not expected to cancel broadband bearing-impact energy.
+
+**Scope:** This is a single seeded run per fault in simulation. It is a demonstration, not a statistical evaluation (see Section 6 for randomized trials), and it does not establish performance on physical hardware.
+
+## 6. Validation History
+
+### Model evaluation (quick run)
 
 | Metric | Result |
 |---|---:|
-| Random Forest accuracy | 97.9% |
+| Random Forest accuracy (7 classes, 140 unseen samples) | 97.9% |
 | Anomaly detection F1 | 0.987 |
 | Healthy false-alarm rate | 0.0% |
 | Fault detection recall | 97.5% |
-| Fused diagnosis accuracy | 100.0% |
+| Fused diagnosis accuracy (6 fault classes, 120 samples) | 100.0% |
 
-The fused diagnosis result covers six fault classes and 120 samples. It is not an overall seven-class healthy-plus-fault accuracy.
+The fused-diagnosis figure excludes healthy samples, so it is not a seven-class accuracy.
 
-### Earlier randomized validation
+### Randomized closed-loop validation (V5.1, current agent)
 
-The previous V5 and V5.1 experiments evaluated 140 trials each, consisting of 120 fault trials and 20 healthy trials.
+140 simulated trials: 120 fault trials (20 per fault, random speed and severity) and 20 healthy trials. Run with:
 
-| Metric | V5 | V5.1 |
-|---|---:|---:|
-| Fault detection | 85.8% | 85.8% |
-| Correct fault diagnosis | 85.8% | 84.2% |
-| Verified mitigation | 65.0% | 64.2% |
-| Recovery | 30.8% | 30.0% |
-| Safety stops | 27.5% | 28.3% |
-| Healthy false alarms | 0% | 0% |
+```bash
+python -m experiments.robust_validation_v5_1 --trials 20 --quiet
+```
 
-These are separate historical simulation evaluations, not results from the six-row validation dataset.
+| Metric | Result |
+|---|---|
+| Fault detection | 120/120 (100%), of which 13 caught first by the hard-limit trip |
+| Correct diagnosis | 104/120 (86.7%) |
+| Verified mitigation | 77/120 (64.2%) |
+| Recovery | 39/120 (32.5%) |
+| Safety stops | 33/120 (27.5%) |
+| Healthy false alarms | 0/20 |
+
+### Per-fault results (% of 20 trials)
+
+| Fault | Detect | Diagnose | Verified | Recovered | Safety stop |
+|---|---:|---:|---:|---:|---:|
+| Imbalance | 100 | 95 | 65 | 60 | 15 |
+| Misalignment | 100 | 100 | 95 | 50 | 5 |
+| Resonance | 100 | 90 | 90 | 85 | 10 |
+| Looseness | 100 | 40 | 35 | 0 | 65 |
+| Bearing outer | 100 | 100 | 40 | 0 | 30 |
+| Bearing inner | 100 | 95 | 60 | 0 | 40 |
+
+### Reading these results
+
+- Detection counts only events *after* fault injection; a false alarm before injection is not credited as a detection. A hard-limit trip counts as a detection but never as mitigation.
+- Looseness is the weakest case: diagnosed correctly in 40% of trials, never recovered, and most often ends in a safety stop. Bearing faults are detected and diagnosed well but are not recovered by the current mitigation options.
+- All numbers are from simulation.
+
+### Earlier results (superseded)
+
+Earlier V5/V5.1 runs reported 85.8% detection and about 30% recovery. They used an earlier agent and a detection metric that credited pre-injection false alarms and did not count trip-caught faults. They are kept in `results/` for history only and should not be compared with the table above.
+
+---
 
 ## 7. Repository Structure
 
